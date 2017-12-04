@@ -1,7 +1,7 @@
 // 路由相关
 const Router = require('koa-router')
 // 日志相关
-const log = require('tracer').colorConsole({ level: require('config').get('log').level })
+const log = require('tracer').colorConsole({ level: require('config').log.level })
 // 初始化路由
 const router = new Router()
 
@@ -10,4 +10,4 @@ router.get('/cb', function (ctx, next) {
 	ctx.body = 'Y'
 })
 
-module.exports = router;
+module.exports = router
