@@ -1,7 +1,7 @@
 # koa-xcontroller
 Node后端微服务框架，基于koa-xcontroller中间件，自动路由映射控制器文件
 
-[传送门：官方详细文档](https://cheneyweb.github.io/x-koa/dist/index.html)
+[传送门：XServer官网文档](http://xserver.top)
 
 快速上手
 >
