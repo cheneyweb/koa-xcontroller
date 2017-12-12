@@ -53,15 +53,6 @@ RESTful规则
 	
 	http://host:port/xserver/scanlogin/cb
 
-框架整合（开源力量）
->
-    "config": "^1.28.1",
-    "koa": "^2.4.1",
-    "koa-bodyparser": "^4.2.0",
-    "koa-mount": "^3.0.0",
-    "koa-router": "^7.3.0",
-    "tracer": "^0.8.11"
-
 帮助联系
 >
 	作者:cheneyxu
@@ -71,3 +62,4 @@ RESTful规则
 更新日志
 >
 	2017.12.04:精简依赖包
+	2017.12.12:更新koa-body
