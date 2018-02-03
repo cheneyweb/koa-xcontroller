@@ -21,7 +21,7 @@ Node后端微服务框架，基于koa-xcontroller中间件，自动路由映射�
 
 	2, const xcontroller = require('koa-xcontroller')
 
-	3, xcontroller.loadController(app, options)
+	3, xcontroller.init(app, options)
 
 	可选设置controller目录，默认路径是 {project}/src/controller/
 	

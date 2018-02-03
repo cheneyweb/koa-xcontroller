@@ -14,7 +14,7 @@ const app = new Koa()
 app.use(koaBody())														// 入参JSON解析
 
 // 加载所有控制器
-xcontroller.loadController(app, config.server)				            // 应用实例；可选配置：访问根路径,控制器目录路径
+xcontroller.init(app, config.server)				                    // 应用实例；可选配置：访问根路径,控制器目录路径
 
 // 启动应用服务
 app.listen(port)

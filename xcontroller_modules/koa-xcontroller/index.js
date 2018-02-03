@@ -9,8 +9,8 @@ const path = require('path')
  * app 应用实例对象
  */
 let xcontroller = {
-    loadController(app, options) {
-        const controllerRoot = options.xmodelRoot || '/xserver'
+    init(app, options) {
+        const controllerRoot = options.controllerRoot || '/xserver'
         const controllerDir = `${process.cwd()}${options.controllerDir || '/src/controller/'}`
         // 加载所有控制器
         fs.readdirSync(controllerDir).forEach(function (filename) {
