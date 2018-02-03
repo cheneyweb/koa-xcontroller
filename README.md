@@ -5,7 +5,7 @@ Node后端微服务框架，基于koa-xcontroller中间件，自动路由映射�
 
 快速上手
 >
-	1, config/default.js 中设置请求根路径和控制器目录，然后执行npm install
+	1, config/default.json 中设置请求根路径和控制器目录，然后执行npm install
 
 	2, node app.js
 
@@ -21,7 +21,7 @@ Node后端微服务框架，基于koa-xcontroller中间件，自动路由映射�
 
 	2, const xcontroller = require('koa-xcontroller')
 
-	3, xcontroller.loadController(app, controllerRoot, controllerDir)
+	3, xcontroller.loadController(app, options)
 
 	可选设置controller目录，默认路径是 {project}/src/controller/
 	
@@ -63,3 +63,4 @@ RESTful规则
 >
 	2017.12.04:精简依赖包
 	2017.12.12:更新koa-body
+	2018.02.04:更新所有依赖，精简优化配置，全新1.0版本发布

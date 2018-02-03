@@ -2,7 +2,6 @@
 const config = require('config')
 const port = config.server.port
 const controllerRoot = config.server.controllerRoot
-const controllerDir = __dirname + config.server.controllerDir
 // 应用服务相关
 const Koa = require('koa')
 const koaBody = require('koa-body')
@@ -15,9 +14,9 @@ const app = new Koa()
 app.use(koaBody())														// 入参JSON解析
 
 // 加载所有控制器
-xcontroller.loadController(app, controllerRoot, controllerDir)				// 应用实例,访问根路径,控制器目录路径
+xcontroller.loadController(app, config.server)				            // 应用实例；可选配置：访问根路径,控制器目录路径
 
 // 启动应用服务
 app.listen(port)
 log.info(`XController服务启动【执行环境:${process.env.NODE_ENV},端口:${port}】`)
-log.info(`RESTful  API路径【localhost:${port}${controllerRoot}MODULE_NAME/*】`)
+log.info(`RESTful  API路径【localhost:${port}${config.server.controllerRoot}MODULE_NAME/*】`)

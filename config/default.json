@@ -3,7 +3,7 @@
         "level": "info"
     },
     "server": {
-        "port": 8085,
+        "port": 3636,
         "controllerRoot": "/xserver/",
         "controllerDir": "/src/controller/"
     }

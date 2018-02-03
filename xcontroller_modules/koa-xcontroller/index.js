@@ -9,10 +9,12 @@ const path = require('path')
  * app 应用实例对象
  */
 let xcontroller = {
-    loadController(app, controllerRoot = '/xserver/', controllerDir = __dirname + '/../../src/controller/') {
+    loadController(app, options) {
+        const controllerRoot = options.xmodelRoot || '/xserver'
+        const controllerDir = `${process.cwd()}${options.controllerDir || '/src/controller/'}`
         // 加载所有控制器
         fs.readdirSync(controllerDir).forEach(function (filename) {
-            let moduleName = `${controllerRoot}${path.basename(filename, '.js')}` // 请求模块名称,user.js就是/user/*的映射
+            let moduleName = `${controllerRoot}/${path.basename(filename, '.js')}` // 请求模块名称,user.js就是/user/*的映射
             let router = require(controllerDir + filename) // 模块路由
             app.use(mount(moduleName, router.routes())) // 加载路由
             app.use(mount(moduleName, router.allowedMethods()))
