@@ -19,4 +19,4 @@ xcontroller.init(app, config.server)				                    // 应用实例；�
 // 启动应用服务
 app.listen(port)
 log.info(`XController服务启动【执行环境:${process.env.NODE_ENV},端口:${port}】`)
-log.info(`RESTful  API路径【localhost:${port}${config.server.controllerRoot}MODULE_NAME/*】`)
+log.info(`RESTful  API路径【localhost:${port}${config.server.controllerRoot}/MODULE_NAME/*】`)
